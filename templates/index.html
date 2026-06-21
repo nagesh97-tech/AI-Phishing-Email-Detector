@@ -40,6 +40,12 @@
         button:hover{
             background:#0056b3;
         }
+
+        .result{
+            margin-top:20px;
+            font-size:22px;
+            font-weight:bold;
+        }
     </style>
 
 </head>
@@ -52,11 +58,19 @@
 
 <p>Paste an email below and check whether it is phishing or legitimate.</p>
 
-<textarea placeholder="Paste email content here..."></textarea>
+<form method="POST">
+
+<textarea name="email" placeholder="Paste email content here..."></textarea>
 
 <br><br>
 
-<button>Analyze Email</button>
+<button type="submit">Analyze Email</button>
+
+</form>
+
+<div class="result">
+    {{ result }}
+</div>
 
 </div>
 
